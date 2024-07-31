@@ -52,13 +52,14 @@ img {
   position: fixed;
   top: 24px;
   left: 50%;
-  max-width: 1392px;
   width: 100%;
   transform: translateX(-50%);
-  color: #fff;
+  padding: 0 24px;
 }
 
 .header__container {
+  max-width: 1392px;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,8 +147,10 @@ img {
   font-size: 0;
   background: #f2f9f7;
   min-height: 600px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 6px;
   color: #1d1c1d;
 }
 
@@ -195,67 +198,237 @@ img {
   justify-content: space-between;
 }
 
-.footer__logo-link {
-
-}
-
 .footer__logo {
-
-}
-
-.footer__nav {
-
+  font-size: 0;
 }
 
 .footer__menu {
-
-}
-
-.footer__menu-item {
-
-}
-
-.footer__menu-link {
-
+  display: flex;
+  gap: 50px;
 }
 
 .footer__info {
-
+  font-size: 16px;
 }
 
 .footer__copyright {
-
-}
-
-.footer__developers {
-
+  margin-top: 0;
+  margin-bottom: 17px;
 }
 
 .footer__developer {
-
+  margin-bottom: 3px;
 }
 
-.footer__developer-link {
-
-}
-
-.footer__contacts {
-
+.footer__developer:last-child {
+  margin-bottom: 0;
 }
 
 .footer__email {
-
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .footer__social {
-
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.footer__social-item {
+/* media */
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 42px;
+  }
 
+  /* header */
+  .header__container {
+    top: 20px;
+    padding: 12px 22px;
+  }
+
+  /* promo */
+  .promo__container {
+    padding-top: 172px;
+    padding-bottom: 60px;
+    background-image: url("/image/bg-promo-1024.png");
+    background-position: right 45px bottom 0;
+    background-repeat: no-repeat;
+  }
+
+  .promo__title {
+    font-size: 70px;
+    margin-bottom: 40px;
+    max-width: 620px;
+  }
+
+  /* product */
+  .product {
+    min-height: 450px;
+  }
+
+  /* footer */
+  .footer__menu {
+    gap: 32px;
+  }
 }
 
-.footer__social-link {
+@media (max-width: 940px) {
+  /* header */
+  .header__logo {
+    width: 78px;
+  }
 
+  .header__menu {
+    gap: 24px;
+  }
+
+  .header__menu-link {
+    font-size: 16px;
+  }
+
+  /* promo */
+  .promo__container {
+    padding-top: 157px;
+    background-position: right bottom;
+    background-size: 203px;
+  }
+
+  .promo__title {
+    font-size: 54px;
+    max-width: 460px;
+  }
+
+  .promo__link {
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+
+  /* products */
+  .products {
+    padding: 80px 0;
+  }
+
+  .products__title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .products__list {
+    grid-template-columns: repeat(auto-fill, minmax(217px, 1fr));
+    gap: 16px;
+  }
+
+  /* product */
+  .product {
+    min-height: 360px;
+  }
+
+  .product__title {
+    font-size: 20px;
+  }
+
+  .product__price {
+    font-size: 16px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer__menu {
+    gap: 24px;
+  }
+
+  .footer__menu-link {
+    font-size: 16px;
+  }
+
+  .footer__info {
+    font-size: 12px;
+  }
+
+  .footer__email {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 }
 
+@media (max-width: 660px) {
+  .container {
+    padding: 0 16px;
+  }
+  /* header */
+  .header {
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .header__container {
+    padding: 8px 16px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  /* promo */
+  .promo__container {
+    padding-top: 90px;
+    padding-bottom: 250px;
+    background-position: center bottom 0;
+    background-size: 145px;
+  }
+
+  .promo__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  /* products */
+  .products {
+    padding: 60px 0;
+  }
+
+  .products__list {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+  }
+
+  /* product */
+  .product__image {
+    height: 100%;
+    object-fit: cover;
+  }
+  .product__content {
+    padding: 32px 8px 16px;
+  }
+
+  .product__title {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* footer */
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer__contacts {
+    order: 1;
+  }
+
+  .footer__info {
+    order: 2;
+  }
+}
