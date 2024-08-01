@@ -425,11 +425,7 @@ img {
     gap: 16px;
   }
 
-  .footer__contacts {
-    order: 1;
-  }
-
   .footer__info {
-    order: 2;
+    order: 1;
   }
 }
