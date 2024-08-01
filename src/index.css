@@ -39,6 +39,20 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .container {
@@ -69,10 +83,6 @@ img {
   background: rgba(108, 185, 171, 0.7);
 }
 
-.header__logo-link {
-  font-size: 0;
-}
-
 .header__menu {
   display: flex;
   align-items: center;
@@ -84,7 +94,7 @@ img {
   height: 28px;
   color: #64099b;
   font-size: 12px;
-  background-image: url("/image/icons/bag.svg");
+  background-image: url("/image/bag.svg");
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -144,7 +154,6 @@ img {
 
 /* product */
 .product {
-  font-size: 0;
   background: #f2f9f7;
   min-height: 600px;
   height: 100%;
@@ -198,10 +207,6 @@ img {
   justify-content: space-between;
 }
 
-.footer__logo {
-  font-size: 0;
-}
-
 .footer__menu {
   display: flex;
   gap: 50px;
@@ -235,6 +240,195 @@ img {
   align-items: center;
   gap: 12px;
 }
+
+/* cart */
+.cart {
+  padding: 215px 0 50px;
+}
+
+.cart__container {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px 20px;
+}
+
+.cart__title {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+}
+
+.cart__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.cart__summary {
+  display: grid;
+  grid-template-areas: 
+  "title button"
+  "total button";
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  background-color: #f2f9f7;
+  color: #1d1c1d;
+}
+
+.cart__summary-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 20px;
+}
+
+.cart__total {
+  grid-area: total;
+  margin: 0;
+  font-size: 20px;
+}
+
+.cart__order-button {
+  grid-area: button;
+  border: 1px solid #64099b;
+  border-radius: 4px;
+  padding: 16px 24px;
+  font-size: 20px;
+  color: #64099b;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* cart-item */
+.cart-item {
+  background-color: #f2f9f7;
+}
+
+.cart-item__image {
+  display: block;
+  width: 100%;
+}
+
+.cart-item__info {
+  padding: 16px;
+}
+
+.cart-item__title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #1d1c1d;
+  margin-bottom: 8px;
+}
+
+.cart-item__quantity {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-item__quantity-button {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #b8b8b8;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cart-item__quantity-button_minus {
+  background-image: url("/image/minus.svg");
+}
+
+.cart-item__quantity-button_plus {
+  background-image: url("/image/plus.svg");
+}
+
+.cart-item__quantity-input {
+  width: 26px;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  opacity: none;
+  border: none;
+}
+
+.cart-item__price {
+  font-size: 20px;
+}
+
+/* order */
+.order {
+  padding: 50px 0 100px;
+}
+
+.order__title {
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.order__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 640px;
+}
+
+.order__input {
+  border-radius: 4px;
+  padding: 17px 16px;
+  background-color: #f2f9f7;
+  font-size: 16px;
+  line-height: 1.24;
+  border: none;
+}
+
+.order__input::placeholder {
+  color: #b8b8b8;
+}
+
+.order__input_address {
+  grid-column: 1 / -1;
+}
+
+.order__payment {
+  margin: 0;
+  padding: 12px 0 0;
+  border: none;
+}
+
+.order__payment-title {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.order__payment-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.order__payment-label:last-child {
+  margin-bottom: 0;
+}
+
+.order__radio {
+  margin-right: 8px;
+}
+
 
 /* media */
 @media (max-width: 1240px) {
