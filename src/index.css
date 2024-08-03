@@ -270,7 +270,7 @@ input[type="number"] {
 
 .cart__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -492,7 +492,7 @@ input[type="number"] {
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 
   /* cart-item */
@@ -643,7 +643,7 @@ input[type="number"] {
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
     gap: 16px;
   }
 
@@ -786,7 +786,7 @@ input[type="number"] {
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 8px;
   }
 
