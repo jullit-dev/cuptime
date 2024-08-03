@@ -441,6 +441,13 @@ input[type="number"] {
   margin-right: 8px;
 }
 
+/* skeleton loader */
+.skeleton-wrapper {
+  width: 100%;
+  height: 600px;
+  background-color: #f2f9f7;
+}
+
 
 /* media */
 @media (max-width: 1240px) {
@@ -497,6 +504,11 @@ input[type="number"] {
   /* order */
   .order__form {
     max-width: 620px;
+  }
+
+  /* skeleton loader */
+  .skeleton-wrapper {
+    height: 450px;
   }
 }
 
@@ -677,6 +689,11 @@ input[type="number"] {
 
   .order__payment {
     padding-top: 8px;
+  }
+
+  /* skeleton loader */
+  .skeleton-wrapper {
+    height: 360px;
   }
 }
 
