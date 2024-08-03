@@ -1,0 +1,1 @@
+export const API_URL = 'https://cuptime-api.onrender.com';
