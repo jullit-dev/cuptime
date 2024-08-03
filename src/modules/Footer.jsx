@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
+
   return (
     <footer className="footer">
       <div className="container footer__container">
@@ -7,21 +10,21 @@ export const Footer = () => {
         </a>
 
         <div className="footer__nav">
-          <ul className="footer__menu">
-            <li className="footer__menu-item">
-              <a className="footer__menu-link" href="#">Чай</a>
+        <ul className="header__menu">
+            <li className="header__menu-item">
+              <Link className="header__menu-link" to="/products?category=tea">Чай</Link>
             </li>
-            <li className="footer__menu-item">
-              <a className="footer__menu-link" href="#">Кофе</a>
+            <li className="header__menu-item">
+              <Link className="header__menu-link" to="/products?category=coffee">Кофе</Link>
             </li>
-            <li className="footer__menu-item">
-              <a className="footer__menu-link" href="#">Чайники</a>
+            <li className="header__menu-item">
+              <Link className="header__menu-link" to="/products?category=teapots">Чайники</Link>
             </li>
-            <li className="footer__menu-item">
-              <a className="footer__menu-link" href="#">Турки</a>
+            <li className="header__menu-item">
+              <Link className="header__menu-link" to="/products?category=cezves">Турки</Link>
             </li>
-            <li className="footer__menu-item">
-              <a className="footer__menu-link" href="#">Прочее</a>
+            <li className="header__menu-item">
+              <Link className="header__menu-link" to="/products?category=other">Прочее</Link>
             </li>
           </ul>
         </div>
