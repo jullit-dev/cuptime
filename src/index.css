@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  min-width: 320px;
   background-color: #fff;
   font-size: 20px;
   line-height: 1.24;
@@ -110,6 +111,21 @@ input[type="number"] {
   padding: 10px 4px 3px;
 }
 
+/* burger */
+.header__close-btn {
+  display: none;
+}
+
+.header__control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__burger {
+  display: none;
+}
+
 /* promo */
 .promo {
   background-color: #6cb9ab;
@@ -117,6 +133,7 @@ input[type="number"] {
 }
 
 .promo__container {
+  min-height: 600px;
   padding-top: 210px;
   padding-bottom: 80px;
   background-image: url("/image/bg-promo.png");
@@ -161,7 +178,6 @@ input[type="number"] {
 /* product */
 .product {
   background: #f2f9f7;
-  min-height: 600px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -176,6 +192,7 @@ input[type="number"] {
 
 .product__content {
   flex-grow: 1;
+  gap: 4px;
   padding: 40px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -185,7 +202,6 @@ input[type="number"] {
   flex-grow: 1;
   font-weight: 400;
   font-size: 24px;
-  margin-bottom: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -448,7 +464,6 @@ input[type="number"] {
   background-color: #f2f9f7;
 }
 
-
 /* media */
 @media (max-width: 1240px) {
   .container {
@@ -463,6 +478,7 @@ input[type="number"] {
 
   /* promo */
   .promo__container {
+    min-height: 484px;
     padding-top: 172px;
     padding-bottom: 60px;
     background-image: url("/image/bg-promo-1024.png");
@@ -757,8 +773,47 @@ input[type="number"] {
     display: none;
   }
 
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* burger */
+  .header__burger {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header__nav_active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    height: 100vh;
+    background-color: #6cb9ab;
+  }
+
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
   /* promo */
   .promo__container {
+    min-height: 420px;
     padding-top: 90px;
     padding-bottom: 250px;
     background-position: center bottom 0;
