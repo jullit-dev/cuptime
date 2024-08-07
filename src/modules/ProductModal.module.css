@@ -139,7 +139,7 @@
 
 @media (max-width: 940px) {
   .modal {
-    max-width: 450px;
+    max-width: 524px;
   }
 
   .content {
@@ -206,6 +206,7 @@
 
   .modal {
     flex-direction: column;
+    max-width: 450px;
   }
 
   .image {
