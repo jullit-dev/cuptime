@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useProducts } from "../context/ProductContext";
 
 export const Footer = () => {
+  const { categories } = useProducts();
 
   return (
     <footer className="footer">
@@ -10,22 +12,12 @@ export const Footer = () => {
         </a>
 
         <div className="footer__nav">
-        <ul className="header__menu">
-            <li className="header__menu-item">
-              <Link className="header__menu-link" to="/products?category=tea">Чай</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className="header__menu-link" to="/products?category=coffee">Кофе</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className="header__menu-link" to="/products?category=teapots">Чайники</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className="header__menu-link" to="/products?category=cezves">Турки</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className="header__menu-link" to="/products?category=other">Прочее</Link>
-            </li>
+          <ul className="header__menu">
+            {Object.entries(categories).map(([key, value]) => (
+              <li key={key} className="header__menu-item">
+                <Link className="header__menu-link" to={`/products?category=${key}`}>{value}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 

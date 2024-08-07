@@ -6,17 +6,19 @@ import { SkeletonLoader } from "./SkeletonLoader";
 
 export const Products = () => {
   const [searchParams] = useSearchParams();
-  const { products, setCategory } = useProducts();
+  const { products, setCategory, categories } = useProducts();
   const category = searchParams.get('category');
 
   useEffect(() => {
     setCategory(category);
   }, [category, setCategory]);
 
+  const categoryTitle = categories[category] || "Товары"
+
   return (
     <section className="products">
       <div className="container">
-        <h1 className="products__title">Чай</h1>
+        <h1 className="products__title">{categoryTitle}</h1>
         <ul className="products__list">
           {products.length ? (
             products.map((item) => <Product key={item.id} data={item} />)
