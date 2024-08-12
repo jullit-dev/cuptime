@@ -12,10 +12,10 @@ export const Footer = () => {
         </a>
 
         <div className="footer__nav">
-          <ul className="header__menu">
+          <ul className="footer__menu">
             {Object.entries(categories).map(([key, value]) => (
-              <li key={key} className="header__menu-item">
-                <Link className="header__menu-link" to={`/products?category=${key}`}>{value}</Link>
+              <li key={key} className="footer__menu-item">
+                <Link className="footer__menu-link" to={`/products?category=${key}`}>{value}</Link>
               </li>
             ))}
           </ul>
