@@ -20,7 +20,9 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
     }
   };
   const handleIncrease = () => {
-    setQuantity(quantity + 1)
+    if (quantity < 9) {
+      setQuantity(quantity + 1)
+    }
   };
   const handleAddToCart = () => {
     addToCart(data, quantity);
