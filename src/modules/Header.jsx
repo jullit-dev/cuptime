@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header__container container">
-        <Link className="header__logo-link" to="/">
+        <Link className="header__logo-link" to="/cuptime">
           <img className="header__logo" src="image/logo.svg" alt="Логотип Cup Time" />
         </Link>
         <nav className={`header__nav ${isMenuOpen ? "header__nav_active" : ""}`}>

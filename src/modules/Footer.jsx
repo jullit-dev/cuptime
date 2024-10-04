@@ -7,9 +7,9 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer__container">
-        <a className="footer__logo-link">
+        <Link className="footer__logo-link" to="/cuptime">
           <img className="footer__logo" src="image/logo.svg" alt="Логотип Cup Time" />
-        </a>
+        </Link>
 
         <div className="footer__nav">
           <ul className="footer__menu">
