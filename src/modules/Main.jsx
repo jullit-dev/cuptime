@@ -8,7 +8,7 @@ export const Main = () => {
   return (
     <main className="main">
       <Routes>
-        <Route path='/' element={<Navigate to="/cuptime/products?category=tea" />} />
+        <Route path='/cuptime' element={<Navigate to="/cuptime/products?category=tea" />} />
         <Route 
           path="/products" 
           element={
